@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript</title>
+</head>
+<body>
+    <p id="respuesta"></p>
+    <p id="resultado"></p>
+    <p id="concatenacion"></p>
+    <p id="tipoDato"></p>
+    <p id="sumaMultiplos"></p>
 
+    <script>
+        // Problema 1: ¿Qué es JavaScript y en qué se asemeja a Java?
+        var respuesta = "JavaScript (JS) es un lenguaje de programación común en el desarrollo web. A pesar de que su nombre se parece a Java, no están relacionados. Existen algunas similitudes entre ellos:";
+        respuesta += "<ul>";
+        respuesta += "<li>Comparten una sintaxis similar.</li>";
+        respuesta += "<li>Son lenguajes orientados a objetos.</li>";
+        respuesta += "<li>Ambos se ejecutan en entornos de tiempo de ejecución (Java en la JVM y JS en el navegador o Node.js).</li>";
+        respuesta += "</ul>";
+        respuesta += "También hay diferencias importantes:";
+        respuesta += "<ul>";
+        respuesta += "<li>Java es un lenguaje compilado, mientras que JavaScript es interpretado.</li>";
+        respuesta += "<li>Java se utiliza para aplicaciones de servidor, aplicaciones móviles (Android), etc., mientras que JavaScript se usa principalmente en el navegador para crear interacciones dinámicas en sitios web.</li>";
+        respuesta += "</ul>";
+
+        document.getElementById("respuesta").innerHTML = respuesta;
+
+        // Problema 2: Declaración de variables con "var" y operaciones
+        var num1 = 10;
+        var num2 = 5;
+
+        var suma = num1 + num2;
+        var resta = num1 - num2;
+        var multiplicacion = num1 * num2;
+        var division = num1 / num2;
+
+        console.log("Suma:", suma);
+        console.log("Resta:", resta);
+        console.log("Multiplicación:", multiplicacion);
+        console.log("División:", division);
+
+        document.getElementById("resultado").textContent = `Suma: ${suma}, Resta: ${resta}, Multiplicación: ${multiplicacion}, División: ${division}`;
+
+        // Problema 3: Declaración de variables con "let" y concatenación
+        let nombre = "Jose";
+        let apellido = "Avila";
+
+        let nombreCompleto = nombre + " " + apellido;
+        console.log("Nombre completo:", nombreCompleto);
+
+        document.getElementById("concatenacion").textContent = `Nombre completo: ${nombreCompleto}`;
+
+        // Problema 4: Declaración de variables con "const" y tipo de dato
+        const pi = 3.1416;
+        const mensaje = "Hola, mundo";
+
+        console.log("Tipo de dato de pi:", typeof pi);
+        console.log("Tipo de dato de mensaje:", typeof mensaje);
+
+        document.getElementById("tipoDato").textContent = `Tipo de dato de pi: ${typeof pi}, Tipo de dato de mensaje: ${typeof mensaje}`;
+
+        // Problema 5: Declaración de un objeto con diferentes tipos de valores
+        const miObjeto = {
+            numero: 42,
+            texto: "Hola",
+            booleano: true
+        };
+
+        console.log(miObjeto);
+
+        // Problema 6: Función para sumar múltiplos de 3 o 5
+        function sumaMultiplos(num) {
+            let suma = 0;
+            for (let i = 1; i < num; i++) {
+                if (i % 3 === 0 || i % 5 === 0) {
+                    suma += i;
+                }
+            }
+            return suma;
+        }
+
+        const numeroDado = 15;
+        const resultadoSuma = sumaMultiplos(numeroDado);
+        console.log("Suma de múltiplos:", resultadoSuma);
+
+        document.getElementById("sumaMultiplos").textContent = `Suma de múltiplos ${numeroDado}: ${resultadoSuma}`;
+
+    </script>
+</body>
+</html>
