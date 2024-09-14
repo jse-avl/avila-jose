@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas de lógica matemática</title>
+</head>
+<body>
+    <h1>Resolución de problemas matemáticos</h1>
+
+    <form id="palindrome-form">
+        <label for="numero">Ingresa un número:</label>
+        <input type="number" id="numero" name="numero">
+        <button onclick="verificarPalindromo()">Verificar</button>
+        <p id="resultado-palindromo"></p>
+    </form>
+
+    <form id="cadena-form">
+        <label for="cadena">Ingresa una cadena:</label>
+        <input type="text" id="cadena" name="cadena">
+        <button onclick="contarCaracteres()">Contar</button>
+        <p id="resultado-caracteres"></p>
+    </form>
+
+    <form id="bisiesto-form">
+        <label for="anio">Ingresa un año:</label>
+        <input type="number" id="anio" name="anio">
+        <button onclick="verificarBisiesto()">Verificar</button>
+        <p id="resultado-bisiesto"></p>
+    </form>
+
+    <form id="primos-form">
+        <label for="limite">Ingresa un límite:</label>
+        <input type="number" id="limite" name="limite">
+        <button onclick="calcularSumatoriaPrimos()">Calcular</button>
+        <p id="resultado-primos"></p>
+    </form>
+
+    <script>
+        function verificarPalindromo() {
+            const numero = parseInt(document.getElementById('numero').value);
+            const esPalindromo = esPalindromoDobleBase(numero);
+            document.getElementById('resultado-palindromo').textContent = `¿Es palíndromo de doble base? ${esPalindromo}`;
+        }
+
+        function contarCaracteres() {
+            const cadena = document.getElementById('cadena').value;
+            const cantidad = contarCaracteres(cadena);
+            document.getElementById('resultado-caracteres').textContent = `Cantidad de caracteres: ${cantidad}`;
+        }
+
+        function verificarBisiesto() {
+            const anio = parseInt(document.getElementById('anio').value);
+            const esBisiestoResultado = esBisiesto(anio);
+            document.getElementById('resultado-bisiesto').textContent = `¿Es bisiesto? ${esBisiestoResultado}`;
+        }
+
+        function calcularSumatoriaPrimos() {
+            const limite = parseInt(document.getElementById('limite').value);
+            const sumaPrimos = sumatoriaPrimos(limite);
+            document.getElementById('resultado-primos').textContent = `Sumatoria de primos: ${sumaPrimos}`;
+        }
+
+    </script>
+</body>
+</html>
