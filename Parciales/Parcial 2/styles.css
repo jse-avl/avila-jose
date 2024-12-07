@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.number-item {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+.number-item:hover {
+    transform: scale(1.1);
+    background-color: #e68900;
+}

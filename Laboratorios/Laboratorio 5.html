@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabras al contrario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        span {
+            display: block;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Palabras al contrario</h2>
+        <input type="text" id="inputField" placeholder="Escribe algo...">
+        <select id="colorPicker">
+            <option value="#333">Negro</option>
+            <option value="#ff0000">Rojo</option>
+            <option value="#00ff00">Verde</option>
+            <option value="#0000ff">Azul</option>
+        </select>
+        <span id="outputSpan"></span>
+    </div>
+
+    <script>
+        const inputField = document.getElementById('inputField');
+        const colorPicker = document.getElementById('colorPicker');
+        const outputSpan = document.getElementById('outputSpan');
+
+        inputField.addEventListener('input', () => {
+            updateOutput();
+        });
+
+        colorPicker.addEventListener('change', () => {
+            updateOutput();
+        });
+
+        function updateOutput() {
+            const inputText = inputField.value;
+            const reversedText = inputText.split('').reverse().join('');
+            outputSpan.textContent = reversedText;
+            outputSpan.style.color = colorPicker.value;
+        }
+    </script>
+</body>
+</html>

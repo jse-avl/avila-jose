@@ -1,0 +1,140 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #031926;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 80px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: -85px;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.search-section {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#pokemon-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100px;
+}
+
+.btn-reset {
+    background-color: #19a5f8;
+    color: white;
+}
+
+.btn-reset:hover {
+    background-color: #3012b6;
+}
+
+.btn-submit {
+    background-color: #19a5f8;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #3012b6;
+}
+
+.pokemon-info {
+    display: none;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.sprites img {
+    width: 10px;
+    height: 10%;
+    margin: 10px;
+}
+
+.pokemon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.sprites {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    margin-top: 50px;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+    padding-right: 20px;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -40px;
+}
+
+.values {
+    margin-top: 5px;
+    font-size: 20px;
+}
